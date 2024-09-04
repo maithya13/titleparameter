@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract TitleContract {
+    string public title;
+
+    // Constructor that accepts a title as a parameter
+    constructor(string memory _title) {
+        title = _title;
+    }
+
+    // Function to update the title
+    function setTitle(string memory _newTitle) public {
+        title = _newTitle;
+    }
+
+    // Function to retrieve the title
+    function getTitle() public view returns (string memory) {
+        return title;
+    }
+}
